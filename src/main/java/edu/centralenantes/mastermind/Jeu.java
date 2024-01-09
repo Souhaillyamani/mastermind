@@ -4,6 +4,9 @@
  */
 package edu.centralenantes.mastermind;
 
+import java.util.Collections;
+import java.util.List;
+
 /**
  *
  * @author Souhail
@@ -31,10 +34,10 @@ public class Jeu {
             // Le décodeur tente de deviner le code
             while (true) {
                 // Le décodeur propose une combinaison de pions
-                List<Couleur> combinaison = décodeur.proposerCombinaison();
+                List<Couleur> combinaison = (List<Couleur>) décodeur.proposerCombinaison();
 
                 // Le codeur donne des indices
-                List<Couleur> indices = codeur.donnerIndices(combinaison);
+                List<Couleur> indices = (List<Couleur>) codeur.donnerIndices(combinaison);
 
                 // Le décodeur vérifie les indices
                 if (indices.equals(Collections.emptyList())) {
