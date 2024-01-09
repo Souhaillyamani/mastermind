@@ -14,8 +14,9 @@ public class Pion {
 
     private Couleur couleur;
 
-    public Pion(Couleur couleur) {
-        this.couleur = couleur;
+    
+    public Pion(int i) {
+        this.couleur = Couleur(i);
     }
 
     public Couleur getCouleur() {
@@ -24,6 +25,24 @@ public class Pion {
 
     public void afficherCouleur() {
         // On affiche la couleur du pion
+    }
+
+    private Couleur Couleur(int i) {
+        switch (i) {
+        case 0:
+            return Couleur.JAUNE;
+        case 1:
+            return Couleur.BLEU;
+        case 2:
+            return Couleur.ROUGE;
+        case 3:
+            return Couleur.VERT;
+        case 4:
+            return Couleur.BLANC;
+        case 5:
+            return Couleur.NOIR;
+        }
+    return Couleur.NOIR;
     }
 }
 

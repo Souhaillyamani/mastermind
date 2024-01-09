@@ -4,6 +4,9 @@
  */
 package edu.centralenantes.mastermind;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Souhail

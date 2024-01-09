@@ -4,11 +4,14 @@
  */
 package edu.centralenantes.mastermind;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 /**
  *
  * @author Souhail
  */
-**Classe Rangée**
 
 public class Rangée {
 
@@ -16,8 +19,10 @@ public class Rangée {
 
     public Rangée() {
         this.pions = new ArrayList<>();
+        Random rd = new Random();
         for (int i = 0; i < 4; i++) {
-            pions.add(new Pion());
+            int j = rd.nextInt(6);
+            pions.add(new Pion(j));
         }
     }
 
